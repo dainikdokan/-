@@ -101,6 +101,7 @@ header .menu a {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    text-align: center; /* Center-align About Us section */
 }
 
 .contact form button:hover {
@@ -141,4 +142,8 @@ footer {
 .floating-buttons .call-now i,
 .floating-buttons .whatsapp i {
     font-size: 20px;
+}
+
+.floating-buttons .whatsapp {
+    margin-right: 5%; /* Pull the WhatsApp button slightly left */
 }
