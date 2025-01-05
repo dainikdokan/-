@@ -12,31 +12,35 @@ header {
     color: #fff;
     padding: 10px 20px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
 header .logo {
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 
 header .logo img {
-    height: 40px;
-    margin-right: 10px;
+    height: 300px;
+   justify-content: center
 }
 
 header .menu {
     list-style: none;
     display: flex;
-    gap: 20px;
-    justify-content: center; /* Center menu links */
+    gap: 10px; /* Center menu links */
+    justify-content: center
+
+
 }
 
 header .menu a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
+
 }
 
 /* Hero Section */
@@ -70,10 +74,53 @@ header .menu a {
 /* Products Section */
 .products .product-list {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 20px;
     justify-items: center; /* Center-align products grid */
 }
+
+.products .product-list .product {
+    width: 100%;
+    max-width: 300px; /* Set a maximum width for consistency */
+    text-align: center; /* Center-align product content */
+}
+
+.products .product-list img {
+    width: 100%;
+    height: auto;
+    max-height: 300px; /* Maintain aspect ratio but limit max height */
+    object-fit: cover; /* Ensure consistent image display */
+    border-radius: 5px; /* Optional: Add rounded corners for images */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better visuals */
+}
+
+.products .product-list .product-title {
+    margin: 10px 0;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.products .product-list .product-price {
+    color: #4CAF50;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.products .product-list .product-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.products .product-list .product-button:hover {
+    background-color: #45a049;
+}
+
 
 /* Contact Us Section */
 .contact {
@@ -82,7 +129,7 @@ header .menu a {
 
 .contact form {
     display: inline-block; /* Center form horizontally */
-    text-align: left; /* Ensure form fields are aligned left */
+    text-align: center; /* Ensure form fields are aligned left */
 }
 
 .contact form input,
@@ -95,18 +142,23 @@ header .menu a {
 }
 
 .contact form button {
+
+    text-align: center; /* Center-align About Us section */
     background-color: #4CAF50;
     color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    text-align: center; /* Center-align About Us section */
+
 }
 
 .contact form button:hover {
     background-color: #45a049;
 }
+
+
+
 
 /* Footer Section */
 footer {
